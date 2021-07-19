@@ -1,0 +1,633 @@
+2021-05-21 13:56:54.206 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 21850 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 13:56:54.207 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 13:56:54.207 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 13:56:54.229 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 13:56:54.229 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 13:56:54.517 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 13:56:54.521 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 13:56:54.745 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 13:56:54.749 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:56:54.750 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 13:56:54.750 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 13:56:54.780 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 13:56:54.780 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 551 ms
+2021-05-21 13:56:54.857 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 13:56:54.875 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 13:56:54.930 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 13:56:54.991 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 13:56:55.153 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 13:56:55.160 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 13:56:55.247 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 13:56:55.251 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 13:56:55.266 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 13:56:55.285 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 13:56:55.335 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 13:56:55.396 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-21 13:56:55.430 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a0dfd063-8174-40e3-b850-4e12f55027a7
+
+2021-05-21 13:56:55.476 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6389d49a, org.springframework.security.web.context.SecurityContextPersistenceFilter@72cb1d96, org.springframework.security.web.header.HeaderWriterFilter@43fe81c, org.springframework.security.web.csrf.CsrfFilter@752e42c4, org.springframework.security.web.authentication.logout.LogoutFilter@2df86a0e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3277737, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@8bb0ca7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@34905e1e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@374a06d7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ec15c6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a905ea1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@530b9ae5, org.springframework.security.web.session.SessionManagementFilter@40caea4d, org.springframework.security.web.access.ExceptionTranslationFilter@224c6a60, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53ce7212]
+2021-05-21 13:56:55.506 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:56:55.516 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 13:56:55.517 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 13:56:55.518 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 13:56:55.520 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 13:56:55.522 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 13:56:55.523 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:56:55.523 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 13:56:55.524 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:56:55.525 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:56:55.528 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 13:56:55.535 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 13:59:00.632 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 21878 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 13:59:00.633 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 13:59:00.633 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 13:59:00.650 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 13:59:00.650 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 13:59:00.895 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 13:59:00.900 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 13:59:01.133 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 13:59:01.137 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:59:01.138 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 13:59:01.138 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 13:59:01.164 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 13:59:01.164 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 513 ms
+2021-05-21 13:59:01.235 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 13:59:01.248 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 13:59:01.297 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 13:59:01.351 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 13:59:01.499 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 13:59:01.506 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 13:59:01.591 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 13:59:01.595 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 13:59:01.610 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 13:59:01.629 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 13:59:01.676 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 13:59:01.735 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-21 13:59:01.768 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d07bf5e1-dc6d-4054-81af-4e99c69df4e1
+
+2021-05-21 13:59:01.811 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@159929d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a6bc7e, org.springframework.security.web.header.HeaderWriterFilter@42925034, org.springframework.security.web.csrf.CsrfFilter@28b92035, org.springframework.security.web.authentication.logout.LogoutFilter@6897aae3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3562c95, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@a382af5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23c30320, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58002eff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bb7dedb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c17e0c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7aedb671, org.springframework.security.web.session.SessionManagementFilter@3a55e0c4, org.springframework.security.web.access.ExceptionTranslationFilter@513b2cab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e1330af]
+2021-05-21 13:59:01.851 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:59:01.861 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 13:59:01.862 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 13:59:01.862 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 13:59:01.864 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 13:59:01.866 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 13:59:01.867 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:59:01.867 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 13:59:01.868 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:59:01.868 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 13:59:01.872 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 13:59:01.879 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 14:00:33.255 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 21885 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:00:33.256 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:00:33.256 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:00:33.276 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:00:33.276 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:00:33.551 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:00:33.557 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:00:33.777 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:00:33.781 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:00:33.781 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:00:33.781 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:00:33.808 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:00:33.808 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 532 ms
+2021-05-21 14:00:33.885 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:00:33.904 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:00:33.952 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:00:34.008 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:00:34.158 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:00:34.165 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:00:34.251 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:00:34.255 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:00:34.269 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:00:34.288 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:00:34.335 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:00:34.393 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-21 14:00:34.425 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d44e3d9a-d5a1-4907-85e8-8de0466e1d4d
+
+2021-05-21 14:00:34.467 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fcc41cc, org.springframework.security.web.context.SecurityContextPersistenceFilter@134b68b2, org.springframework.security.web.header.HeaderWriterFilter@7d7f4f16, org.springframework.security.web.csrf.CsrfFilter@44453d57, org.springframework.security.web.authentication.logout.LogoutFilter@255453e8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3722697e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4abe4c0f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@19129d4b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@a490e7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14f58be7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d3e8cb6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b6a4afb, org.springframework.security.web.session.SessionManagementFilter@19dca527, org.springframework.security.web.access.ExceptionTranslationFilter@497e8aa9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@386868b1]
+2021-05-21 14:00:34.499 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:00:34.509 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 14:00:34.510 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:00:34.511 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:00:34.513 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:00:34.515 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:00:34.516 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:00:34.516 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 14:00:34.517 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:00:34.517 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:00:34.521 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 14:00:34.528 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 14:02:54.900 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 21977 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:02:54.902 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:02:54.902 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:02:54.924 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:02:54.924 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:02:55.187 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:02:55.192 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:02:55.476 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:02:55.483 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:02:55.484 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:02:55.484 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:02:55.520 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:02:55.520 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 596 ms
+2021-05-21 14:02:55.604 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:02:55.624 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:02:55.676 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:02:55.739 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:02:55.883 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:02:55.891 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:02:55.983 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:02:55.987 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:02:56.001 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:02:56.020 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:02:56.067 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:02:56.097 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:02:56.158 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e9a77e39-ee9f-4617-bd1e-f29a89109e1f
+
+2021-05-21 14:02:56.211 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4992139f, org.springframework.security.web.context.SecurityContextPersistenceFilter@64b5718, org.springframework.security.web.header.HeaderWriterFilter@7ee9cce1, org.springframework.security.web.csrf.CsrfFilter@684508c0, org.springframework.security.web.authentication.logout.LogoutFilter@27d9f27, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5dcf75b8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1a763162, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@754ed61f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@45470d32, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28a89796, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@306c1ec6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@81d7b19, org.springframework.security.web.session.SessionManagementFilter@ace0742, org.springframework.security.web.access.ExceptionTranslationFilter@376eb2b3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b69ddd6]
+2021-05-21 14:02:56.246 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:02:56.256 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 14:02:56.257 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:02:56.257 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:02:56.260 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:02:56.263 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:02:56.264 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:02:56.264 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 14:02:56.266 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:02:56.266 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:02:56.269 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 14:02:56.277 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 14:04:26.982 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 21986 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:04:26.983 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:04:26.983 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:04:27.006 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:04:27.007 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:04:27.307 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:04:27.312 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:04:27.525 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:04:27.529 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:04:27.529 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:04:27.529 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:04:27.557 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:04:27.557 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 550 ms
+2021-05-21 14:04:27.625 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:04:27.640 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:04:27.684 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:04:27.737 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:04:27.879 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:04:27.886 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:04:27.975 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:04:27.980 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:04:27.995 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:04:28.014 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:04:28.064 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:04:28.095 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:04:28.155 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 117ac6a4-edcf-44da-a025-4a7d6aadfd96
+
+2021-05-21 14:04:28.197 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f8877f8, org.springframework.security.web.context.SecurityContextPersistenceFilter@38c1c21b, org.springframework.security.web.header.HeaderWriterFilter@43c91791, org.springframework.security.web.csrf.CsrfFilter@1debfed3, org.springframework.security.web.authentication.logout.LogoutFilter@775704be, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@27c23c87, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@da7eebf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@524113dc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4e27f5d4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44b13f25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2651fc8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23b9d515, org.springframework.security.web.session.SessionManagementFilter@1d50e713, org.springframework.security.web.access.ExceptionTranslationFilter@76a8f963, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3fce8cf7]
+2021-05-21 14:04:28.227 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:04:28.238 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 14:04:28.239 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:04:28.239 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:04:28.241 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:04:28.243 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:04:28.244 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:04:28.244 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 14:04:28.246 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:04:28.246 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:04:28.250 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 14:04:28.256 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 14:05:58.835 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 22014 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:05:58.836 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:05:58.836 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:05:58.854 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:05:58.854 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:05:59.107 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:05:59.113 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:05:59.326 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:05:59.329 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:05:59.330 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:05:59.330 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:05:59.358 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:05:59.358 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 503 ms
+2021-05-21 14:05:59.433 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:05:59.454 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:05:59.502 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:05:59.559 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:05:59.701 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:05:59.709 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:05:59.799 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:05:59.803 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:05:59.817 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:05:59.836 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:05:59.886 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:05:59.917 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:05:59.977 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: cbf76cf7-cdbc-487b-a7b7-f0432331270a
+
+2021-05-21 14:06:00.023 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@276ffd1d, org.springframework.security.web.context.SecurityContextPersistenceFilter@94f7bab, org.springframework.security.web.header.HeaderWriterFilter@456195ba, org.springframework.security.web.csrf.CsrfFilter@551ab6f9, org.springframework.security.web.authentication.logout.LogoutFilter@4e2c49ec, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1e1faedd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@376db6cd, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6389d49a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e4f203d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39ce419b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19a33db8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34905e1e, org.springframework.security.web.session.SessionManagementFilter@29ac5c48, org.springframework.security.web.access.ExceptionTranslationFilter@60c6c3d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@765edff4]
+2021-05-21 14:06:00.052 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:06:00.062 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 14:06:00.062 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:06:00.062 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:06:00.064 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:06:00.067 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:06:00.068 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:06:00.068 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 14:06:00.069 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:06:00.070 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:06:00.074 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 14:06:00.080 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 14:07:04.729 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 22047 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:07:04.730 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: pro
+2021-05-21 14:07:05.647 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:07:05.888 [restartedMain] INFO  com.gong.BlogApplication - Started BlogApplication in 1.359 seconds (JVM running for 1.819)
+2021-05-21 14:07:29.143 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 22055 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:07:29.144 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: pro
+2021-05-21 14:07:30.064 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:07:30.295 [restartedMain] INFO  com.gong.BlogApplication - Started BlogApplication in 1.391 seconds (JVM running for 1.692)
+2021-05-21 14:07:56.194 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 22070 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:07:56.195 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:07:56.195 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:07:56.218 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:07:56.218 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:07:56.501 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:07:56.506 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:07:56.717 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:07:56.720 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:07:56.721 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:07:56.721 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:07:56.746 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:07:56.746 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 527 ms
+2021-05-21 14:07:56.829 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:07:56.850 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:07:56.887 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:07:56.940 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:07:57.077 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:07:57.085 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:07:57.173 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:07:57.177 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:07:57.192 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:07:57.211 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:07:57.259 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:07:57.290 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:07:57.350 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7aa01776-c3d5-44ae-9534-b58ac29afb79
+
+2021-05-21 14:07:57.391 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33dea651, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f8bf953, org.springframework.security.web.header.HeaderWriterFilter@2b5ca503, org.springframework.security.web.csrf.CsrfFilter@2a3a9161, org.springframework.security.web.authentication.logout.LogoutFilter@763d2c7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@958d4c0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2b2b3288, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@382b4ad4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78124a6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cb1a5ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75ac674c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52800ea8, org.springframework.security.web.session.SessionManagementFilter@30ce1496, org.springframework.security.web.access.ExceptionTranslationFilter@49b5c42a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8d74a7b]
+2021-05-21 14:07:57.424 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:07:57.434 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 14:07:57.435 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:07:57.435 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:07:57.437 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:07:57.439 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:07:57.440 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:07:57.440 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 14:07:57.443 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:07:57.443 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:07:57.447 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 14:07:57.455 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 14:08:17.331 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 22072 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:08:17.332 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:08:17.333 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:08:17.352 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:08:17.352 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:08:17.625 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:08:17.631 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:08:17.882 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:08:17.886 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:08:17.887 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:08:17.887 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:08:17.919 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:08:17.919 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 567 ms
+2021-05-21 14:08:17.996 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:08:18.016 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:08:18.091 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:08:18.129 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:08:18.282 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:08:18.290 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:08:18.389 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:08:18.393 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:08:18.409 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:08:18.431 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:08:18.487 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:08:18.522 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:08:18.589 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: cc87f076-e46b-419b-be3c-500b182bf444
+
+2021-05-21 14:08:18.647 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@acc78ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@35d74fc3, org.springframework.security.web.header.HeaderWriterFilter@8ce2204, org.springframework.security.web.csrf.CsrfFilter@244efc0, org.springframework.security.web.authentication.logout.LogoutFilter@436101f4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5422e8e6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5eafa6fb, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@52a48ca7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@335f83b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@577279f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41a280b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1da9c752, org.springframework.security.web.session.SessionManagementFilter@7175d617, org.springframework.security.web.access.ExceptionTranslationFilter@137ce5d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6642265]
+2021-05-21 14:08:18.683 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:08:18.693 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 14:08:18.694 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:08:18.694 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:08:18.696 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:08:18.699 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:08:18.699 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:08:18.699 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 14:08:18.701 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:08:18.702 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:08:18.705 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 14:08:18.714 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 14:10:16.777 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 22111 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:10:16.780 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:10:16.780 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:10:16.814 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:10:16.814 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:10:17.166 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:10:17.172 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:10:17.413 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:10:17.417 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:10:17.417 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:10:17.417 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:10:17.442 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:10:17.442 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 628 ms
+2021-05-21 14:10:17.519 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:10:17.532 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:10:17.568 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:10:17.621 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:10:17.786 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:10:17.792 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:10:17.887 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:10:17.892 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:10:17.906 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:10:17.925 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:10:17.971 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:10:18.002 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:10:18.069 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7872dc57-96cd-46e6-8037-4728dbd21cfb
+
+2021-05-21 14:10:18.114 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33dea651, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f8bf953, org.springframework.security.web.header.HeaderWriterFilter@2b5ca503, org.springframework.security.web.csrf.CsrfFilter@2a3a9161, org.springframework.security.web.authentication.logout.LogoutFilter@763d2c7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@958d4c0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2b2b3288, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@382b4ad4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78124a6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cb1a5ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75ac674c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52800ea8, org.springframework.security.web.session.SessionManagementFilter@30ce1496, org.springframework.security.web.access.ExceptionTranslationFilter@49b5c42a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8d74a7b]
+2021-05-21 14:10:18.155 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:10:18.166 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-05-21 14:10:18.168 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:10:18.168 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:10:18.171 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:10:18.174 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:10:18.175 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:10:18.175 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-05-21 14:10:18.178 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:10:18.178 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:10:18.183 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-21 14:10:18.191 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-05-21 14:18:34.567 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 654 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:18:34.568 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:18:34.568 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:18:34.615 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:18:34.615 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:18:34.978 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:18:34.985 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:18:35.249 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:18:35.253 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:18:35.253 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:18:35.253 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:18:35.281 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:18:35.282 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 667 ms
+2021-05-21 14:18:35.365 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:18:35.385 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:18:35.437 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:18:35.501 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:18:35.712 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:18:35.721 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:18:35.830 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:18:35.835 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:18:35.850 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:18:35.874 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:18:35.931 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:18:35.965 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:18:36.044 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0d356956-12db-46a3-aaf2-f8fd00badba4
+
+2021-05-21 14:18:36.096 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@649009b9, org.springframework.security.web.context.SecurityContextPersistenceFilter@362aa777, org.springframework.security.web.header.HeaderWriterFilter@5e817f81, org.springframework.security.web.csrf.CsrfFilter@71dc7a59, org.springframework.security.web.authentication.logout.LogoutFilter@16e31fc3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@742a10a4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@789c7ebf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6e57a323, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2c646cb1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1517ad49, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b93f50e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61594bbc, org.springframework.security.web.session.SessionManagementFilter@78245590, org.springframework.security.web.access.ExceptionTranslationFilter@6fad1c6f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@525cb7ea]
+2021-05-21 14:18:36.128 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:18:36.142 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-21 14:18:36.148 [restartedMain] INFO  com.gong.BlogApplication - Started BlogApplication in 1.909 seconds (JVM running for 2.359)
+2021-05-21 14:18:45.867 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-21 14:18:45.867 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-21 14:18:45.868 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-05-21 14:20:44.377 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:20:44.377 [SpringContextShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:20:44.379 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:20:44.382 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:20:46.454 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 676 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:20:46.455 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:20:46.455 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:20:46.473 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:20:46.473 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:20:46.725 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:20:46.729 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:20:46.961 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:20:46.964 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:20:46.965 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:20:46.965 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:20:46.990 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:20:46.990 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 517 ms
+2021-05-21 14:20:47.071 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:20:47.084 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:20:47.119 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:20:47.173 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:20:47.322 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:20:47.329 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:20:47.424 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:20:47.429 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:20:47.447 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:20:47.469 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:20:47.519 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:20:47.549 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:20:47.608 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8b1e937e-d830-4b46-a94e-5806d9a5251e
+
+2021-05-21 14:20:47.658 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1522bcaf, org.springframework.security.web.context.SecurityContextPersistenceFilter@5edffa30, org.springframework.security.web.header.HeaderWriterFilter@6bb765f8, org.springframework.security.web.csrf.CsrfFilter@4d483305, org.springframework.security.web.authentication.logout.LogoutFilter@7fd0f438, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3427760d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@471e6a71, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@33f3dca7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3451d4a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b9b495e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d72730e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9bdf2b6, org.springframework.security.web.session.SessionManagementFilter@5eb0b257, org.springframework.security.web.access.ExceptionTranslationFilter@59fafea6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@655f71fb]
+2021-05-21 14:20:47.693 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:20:47.705 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-21 14:20:47.712 [restartedMain] INFO  com.gong.BlogApplication - Started BlogApplication in 1.444 seconds (JVM running for 1.877)
+2021-05-21 14:22:02.945 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:22:02.945 [SpringContextShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:22:02.947 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:22:02.950 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-05-21 14:22:05.738 [restartedMain] INFO  com.gong.BlogApplication - Starting BlogApplication using Java 1.8.0_282 on gongxiwus-MacBook-Pro.local with PID 682 (/usr/local/Code/blog/target/classes started by gongxiwu in /usr/local/Code/blog)
+2021-05-21 14:22:05.739 [restartedMain] DEBUG com.gong.BlogApplication - Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-05-21 14:22:05.740 [restartedMain] INFO  com.gong.BlogApplication - The following profiles are active: dev
+2021-05-21 14:22:05.759 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-21 14:22:05.759 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-21 14:22:06.019 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 14:22:06.024 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-05-21 14:22:06.235 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-21 14:22:06.239 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:22:06.239 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-21 14:22:06.240 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-21 14:22:06.266 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-21 14:22:06.266 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 507 ms
+2021-05-21 14:22:06.346 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 14:22:06.361 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-21 14:22:06.401 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-21 14:22:06.454 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-21 14:22:06.587 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-21 14:22:06.594 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-21 14:22:06.686 [restartedMain] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 14:22:06.690 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:22:06.705 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-21 14:22:06.723 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 14:22:06.768 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:22:06.799 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-05-21 14:22:06.860 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-21 14:22:06.872 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-21 14:22:06.878 [restartedMain] INFO  com.gong.BlogApplication - Started BlogApplication in 1.332 seconds (JVM running for 1.635)
+2021-05-21 14:22:11.513 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-21 14:22:11.513 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-21 14:22:11.514 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-05-21 14:22:49.036 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 14:22:49.037 [SpringContextShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 14:22:49.039 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-21 14:22:49.042 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

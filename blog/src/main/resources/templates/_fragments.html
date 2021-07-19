@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">博客详情</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<body>
+
+<!--导航-->
+<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <!--ui提供的container:提供的宽度固定-->
+    <div class="ui container">
+        <!--stackable:可堆叠,屏幕小的时候会堆叠到一块,用于适应移动端网页适配-->
+        <div class="ui inverted secondary stackable menu">
+            <!--teal颜色header-->
+            <h2 class="ui teal header item">CodeSniper</h2>
+            <!--home icon:图标、m-mobile-hide:自定义按钮隐藏-->
+            <!--active:当前活跃-->
+            <a href="#" th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="idea icon"></i>分类</a>
+            <!--<a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i>标签</a>-->
+            <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clone icon"></i>归档</a>
+            <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
+            <!--right:靠右-->
+            <div class="right item m-mobile-hide">
+                <!--可以加transparent:透明-->
+                <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon input inverted">
+                        <input type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--m-right-top:自定义绝对位置布局、m-mobile-show:自定义按钮显示、menu toggle:没有任何显示上的意义,只是为了用jQuery获取这个元素(在最底部script)-->
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--赞赏-->
+<div th:fragment="zanshang" class="ui payQR flowing popup transition hidden">
+    <div class="ui orange basic label">
+        <!--images:自动把字体设置为0了，看不见，所以要设置字体大小，inherit:继承label的字体大小-->
+        <div class="ui images" style="font-size: inherit !important;">
+            <div class="image">
+                <!--rounded bordered:圆角边线-->
+                <img src="../static/images/ZFBQR.png"  alt="" class="ui rounded bordered image" style="width: 120px">
+                <div>支付宝打赏</div>
+            </div>
+            <div class="image">
+                <!--rounded bordered:圆角边线-->
+                <img src="../static/images/WeChatQR.png" alt="" class="ui rounded bordered image" style="width: 120px">
+                <div>微信打赏</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部footer-->
+    <footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
+        <!--center aligned:居中、ui提供的container:提供的宽度固定-->
+        <div class="ui center aligned container">
+            <!--grid:分成16份、divided:分割的线、stackable:可堆叠,屏幕小的时候会堆叠到一块,用于适应移动端网页适配-->
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <!--rounded:圆角的-->
+                            <img src="../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded image" alt="" style="width: 110px">
+                            <!--                             <img src="/images/WeChat.jpg" class="ui rounded image" alt="" style="width: 110px">-->
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                        <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                        <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item m-text-thin">Email：1511288210@qq.com</a>
+                        <a href="#" class="item m-text-thin">QQ：1511288210</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">CodeSniper_Blog</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+                </div>
+            </div>
+            <!--section divider:底部的线-->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-black m-text-spaced m-opacity-tiny">Copyright © 2020 - <span th:text="${#dates.year(#dates.createNow())}">2020</span> CodeSniper Designed by CodeSniper</p>
+        </div>
+        <!--<center>
+            <div class="m-black m-margin-top">
+                <span id="runtime_span"></span>
+                <script type="text/javascript">function show_runtime() {
+                    window.setTimeout("show_runtime()", 1000);
+                    let X = new Date("10/06/2020 15:52:40");
+                    let Y = new Date();
+                    let T = (Y.getTime() - X.getTime());
+                    let M = 24 * 60 * 60 * 1000;
+                    let a = T / M;
+                    let A = Math.floor(a);
+                    let b = (a - A) * 24;
+                    let B = Math.floor(b);
+                    let c = (b - B) * 60;
+                    let C = Math.floor((b - B) * 60);
+                    let D = Math.floor((c - C) * 60);
+                    runtime_span.innerHTML = "本站已运行" + A + "天" + B + "小时" + C + "分" + D + "秒"
+                }
+
+                show_runtime();</script>
+            </div>
+        </center>-->
+    </footer>
+
+
+<th:block th:fragment="script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+    <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+    <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
+    <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+    <script>
+        $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+    </script>
+</th:block>
+
+</body>
+</html>

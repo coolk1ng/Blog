@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gong.mapper.TagMapper">
+    <!--    增加分类-->
+    <insert id="addTag" parameterType="Tag">
+        insert into  blog.t_tag (id,name) values (#{id},#{name})
+    </insert>
+
+    <!--    根据id查询分类-->
+    <select id="getTagById"  resultType="Tag">
+        select * from blog.t_tag where id=#{id}
+    </select>
+
+    <!--    根据name查询分类-->
+    <select id="getTagByName" resultType="Tag">
+        select * from blog.t_tag where name=#{name}
+    </select>
+
+    <!--    查询所有分类-->
+    <select id="getAllTag" resultType="Tag">
+        select * from blog.t_tag
+    </select>
+
+    <!--    修改分类-->
+    <update id="updateTag" parameterType="Tag">
+        update blog.t_tag set name=#{name} where id=#{id}
+    </update>
+
+    <!--    删除分类-->
+    <delete id="deleteTag">
+        delete from blog.t_tag where id=#{id}
+    </delete>
+</mapper>

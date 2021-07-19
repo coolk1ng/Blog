@@ -1,0 +1,20 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.gong.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+#分页
+pagehelper:
+  helperDialect: mysql
+  reasonable: true  #开启优化，如果开启优化，在分页页码结果没有数据的时候,会显示有数据的页码数据
+  supportMethodsArguments: true #是否支持接口参数来传递分页参数，默认false
+  pageSizeZero: false #pageSize=0 返回所有
+  params: count=countSql
+server:
+  port: 8888

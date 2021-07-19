@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!--移动端预览-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果</title>
+    <!--通过CDN引入Semantic-UI-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+    <!--导航-->
+    <!--inverted:反色、attached:没有圆角，依附在上面:m-padded-tb-mini:m自己定义,padded,上下之间内部间隔,tb上下,mini小点-->
+    <!--m-shadow-small:自定义导航阴影-->
+    <nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <!--ui提供的container:提供的宽度固定-->
+        <div class="ui container">
+            <!--stackable:可堆叠,屏幕小的时候会堆叠到一块,用于适应移动端网页适配-->
+            <div class="ui inverted secondary stackable menu">
+                <!--teal颜色header-->
+                <h2 class="ui teal header item">CodeSniper</h2>
+                <!--home icon:图标、m-mobile-hide:自定义按钮隐藏-->
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+                <!--active:当前活跃-->
+                <a href="#" class="active m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+                <!--right:靠右-->
+                <div class="right  m-item item m-mobile-hide ">
+                    <!--可以加transparent:透明-->
+                    <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon input">
+                        <input type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--m-right-top:自定义绝对位置布局、m-mobile-show:自定义按钮显示、menu toggle:没有任何显示上的意义,只是为了用jQuery获取这个元素(在最底部script)-->
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--中间内容-->
+    <div id="waypoint"  class="m-container-small m-padded-tb-big animated fadeInUp">
+        <div class="ui container">
+            <!--header-->
+            <div class="ui top attached segment">
+                <div class="ui middle aligned two column grid">
+                    <div class="column">
+                        <h3 class="ui teal header">搜索结果</h3>
+                    </div>
+                    <div class="right aligned column">
+                        共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${searchPage.total}"> 14 </h2> 个
+                    </div>
+                </div>
+            </div>
+
+
+            <!--标签下内容-->
+            <!--加top，不希望和上面那个连接在一块-->
+            <div class="ui top attached teal segment">
+                <!--padded调大里面方框的边距、vertical:垂直的、两个相邻中间加横线、m-padded-tb-large相邻间距拉大一点-->
+                <div class="ui padded vertical segment m-padded-tb-large" th:each="blog:${searchPage.getList()}">
+                    <div class="ui middle aligned mobile reversed stackable grid">
+                        <div class="eleven wide column">
+                            <h3 class="ui header" ><a href="#"  target="_blank" class="m-black" th:text="${blog.title}">你真的理解什么是财富自由吗?</a></h3>
+                            <p class="m-text" th:text="${blog.description}">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                            <div class="ui grid">
+                                <div class="eleven wide column">
+                                    <!--horizontal:平着的、mini:小一点-->
+                                    <div class="ui mini horizontal link list">
+                                        <div class="item">
+                                            <!--avatar image:圆形的图片-->
+                                            <img src="https://picsum.photos/id/1027/100/100" th:src="@{${blog.avatar}}" alt="" class="ui avatar image">
+                                            <div class="content"><a href="#" class="header" th:text="${blog.nickname}">CodeSniper</a></div>
+                                        </div>
+                                        <div class="item">
+                                            <!--calendar icon:时间的图标-->
+                                            <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2020/10/1</span>
+                                        </div>
+                                        <div class="item">
+                                            <!--eye icon:眼睛的图标-->
+                                            <i class="eye icon"></i><span th:text="${blog.views}">2200</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--right aligned:靠右、teal:颜色、basic:边线试感觉-->
+                                <div class="right aligned five wide column">
+                                    <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.typeName}">认知升级</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="five wide column">
+                            <a href="#"  target="_blank">
+                                <!--rounded:圆角的-->
+                                <img src="https://picsum.photos/id/16/800/450" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--分页-->
+            <!--bottom attached:把两个连成一个-->
+            <div class="ui bottom attached segment" >1">
+                <div class="ui middle aligned two column grid">
+                    <div class="column">
+                        <a href="#"  th:href="@{/(pageNum=${searchPage.hasPreviousPage} ? ${searchPage.prePage} : 1)}" th:unless="${searchPage.isFirstPage}"  class="ui mini teal basic button">上一页</a>
+                    </div>
+                    <div class="right aligned column">
+                        <a href="#"  th:href="@{/(pageNum=${searchPage.hasNextPage} ? ${searchPage.nextPage} : searchPage.pages)}"  th:unless="${searchPage.isLastPage}"  class="ui mini teal basic button">下一页</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--右侧工具栏-->
+    <div id="toolbar" class="m-padded m-fixed m-right-center"  style="display: none">
+        <div class="ui vertical icon buttons ">
+            <!--chevron up：向上的小图片-->
+            <div id="toTop-button" class="ui icon button" ><i class="chevron up icon"></i></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!--底部footer-->
+    <!--vertical:垂直,无圆角,m-padded-tb-massive:自定义宽度-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <!--center aligned:居中、ui提供的container:提供的宽度固定-->
+        <div class="ui center aligned container">
+            <!--grid:分成16份、divided:分割的线、stackable:可堆叠,屏幕小的时候会堆叠到一块,用于适应移动端网页适配-->
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <!--rounded:圆角的-->
+                            <img src="../static/images/WeChat.jpg" class="ui rounded image" alt="" style="width: 110px">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                        <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                        <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item m-text-thin">Email：1511288210@qq.com</a>
+                        <a href="#" class="item m-text-thin">QQ：1511288210</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">CodeSniper_Blog</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+                </div>
+            </div>
+            <!--section divider:底部的线-->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020/9 - 2020/10 CodeSniper Designed by CodeSniper</p>
+        </div>
+
+    </footer>
+
+    <!--通过CDN引入Semantic-UI(也可通过本地下载引入)-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.2/dist/semantic.min.js"></script>
+
+
+    <script>
+        //<!--jQuery获取这个元素-->
+        $('.menu.toggle').click(function () {//toggleClass开关一样的样式
+            $('.m-item').toggleClass('m-mobile-hide');//m-item:获取那几个列表，点击的时候处理m-mobile-hide
+        });
+        //<!--jQuery:按钮之后触发，执行JS组件-->
+        // $('#payButton').popup({         //获得按钮、.popup:没有为什么，调用组件
+        //     popup : $('.payQR.popup'),  //拿到二维码对象，定位到这个元素
+        //     //on : 'click',               //点击的时候触发
+        //     position: 'bottom center'   //position位置：在中下的位置触发
+        // });
+        //滚动侦测JS，根据滚动的位置显示
+        let waypoint = new Waypoint({
+            element: document.getElementById('waypoint'),   //监测对象
+            handler: function(direction) {                  //当滚动的时候触发；direction；方向，模板里直接用
+                if (direction == 'down') {                  //(direction == 'down')向下滚动；control里可以看
+                    $('#toolbar').show(100);
+                } else {
+                    $('#toolbar').hide(500);
+                }
+                console.log('Scrolled to waypoint!  ' + direction);
+            }
+        })
+        //点击的时候调用平滑滚动里的方法
+        $('#toTop-button').click(function () {
+            $(window).scrollTo(0,500);      //0最顶端，500速度
+        });
+    </script>
+
+</body>
+</html>

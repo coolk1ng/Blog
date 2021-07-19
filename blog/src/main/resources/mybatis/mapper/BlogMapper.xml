@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gong.mapper.BlogMapper">
+    <!--blog结果集映射-->
+    <resultMap id="blog" type="Blog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="published" column="published"/>
+        <result property="typeId" column="type_id"/>
+        <result property="recommend" column="recommend"/>
+        <association property="type" javaType="Type">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+        </association>
+    </resultMap>
+
+
+
+    <!--查询所有博客 显示到列表-->
+    <select id="getAllBlog" resultType="Blog" resultMap="blog">
+        select tb.id,tb.title,tt.name,tb.recommend,tb.published,tb.update_time
+        from blog.t_blog tb,blog.t_type tt
+        where tb.type_id=tt.id
+    </select>
+
+    <!--新增博客-->
+    <insert id="addBlog" parameterType="Blog">
+        insert into blog.t_blog (id,title, content, first_picture, flag,views,
+                                   comment_count, appreciation, share_statement, commentable, published,
+                                   recommend, create_time, update_time, type_id, user_id, description)
+        values (#{id},#{title},#{content},#{firstPicture},#{flag},#{views},#{commentCount},#{appreciation},
+                #{shareStatement},#{commentable},#{published},#{recommend},#{createTime},
+                #{updateTime},#{typeId},#{userId},#{description});
+    </insert>
+
+    <!--搜索博客-->
+    <select id="searchBlog" parameterType="Blog" resultMap="blog">
+        select tb.id,tb.title,tb.type_id,tt.name,tb.recommend,tb.published,tb.update_time
+        from blog.t_blog tb,blog.t_type tt
+        <where>
+            <if test="1==1">
+                AND tb.type_id=tt.id
+            </if>
+            <if test="typeId != null">
+                AND tb.type_id like '%${typeId}%'
+            </if>
+            <if test="title!=null">
+                AND tb.title like '%${title}%'
+            </if>
+        </where>
+    </select>
+
+    <!--删除博客-->
+    <delete id="deleteBlog">
+        delete from blog.t_blog where id=#{id}
+    </delete>
+
+    <resultMap id="updatePage" type="Blog">
+        <id property="id" column="id"/>
+        <result property="flag" column="flag"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="typeId" column="type_id"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="description" column="description"/>
+        <result property="recommend" column="recommend"/>
+        <result property="published" column="published"/>
+        <result property="shareStatement" column="share_statement"/>
+        <result property="appreciation" column="appreciation"/>
+        <result property="commentable" column="commentable"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <!--根据id查询博客-->
+    <select id="getBlogById" resultMap="updatePage">
+        select b.id,b.flag,b.title,b.content,b.type_id,
+               b.first_picture,b.description,b.recommend,b.published,b.share_statement,
+               b.appreciation,b.commentable from blog.t_blog b  where  b.id = #{id};
+    </select>
+
+    <!--更新博客-->
+    <update id="updateBlog" parameterType="Blog">
+        update blog.t_blog set published = #{published},flag = #{flag} ,
+        title = #{title}, content = #{content}, type_id = #{typeId},
+        first_picture = #{firstPicture} , description = #{description} , recommend = #{recommend},
+        share_statement = #{shareStatement}, appreciation = #{appreciation},
+        commentable = #{commentable} ,update_time = #{updateTime} where id = #{id};
+    </update>
+
+    <resultMap id="firstPage" type="com.gong.vo.FirstPageBlog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="views" column="views"/>
+        <result property="commentCount" column="comment_count"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="description" column="description"/>
+        <result property="typeName" column="name"/>
+        <result property="nickname" column="nickname"/>
+        <result property="avatar" column="avatar"/>
+    </resultMap>
+
+    <!--查询博客的所有属性-->
+    <select id="getBlogs" resultMap="firstPage">
+        select b.id,b.title,b.first_picture, b.views, b.comment_count,b.update_time,b.description,t.name,
+               u.nickname, u.avatar
+        from blog.t_blog b, blog.t_type t,blog.t_user u
+        where b.type_id = t.id and  u.id = b.user_id order by b.update_time desc
+    </select>
+
+    <resultMap id="recommendBlog" type="com.gong.vo.RecommendBlog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="recommend" column="recommend"/>
+        <result property="firstPicture" column="first_picture"/>
+    </resultMap>
+
+    <!--推荐博客标题-->
+    <select id="getAllRecommendBlog" resultMap="recommendBlog">
+        select * from blog.t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 5
+    </select>
+
+    <!--全局搜索博客-->
+    <select id="queryBlog" resultMap="firstPage">
+        select b.id,b.title,b.first_picture, b.views,b.comment_count,b.update_time,b.description,
+               t.name ,
+               u.nickname, u.avatar
+        from blog.t_blog b, blog.t_type t,blog.t_user u
+        where b.type_id = t.id and  u.id = b.user_id and (b.title like '%${query}%' or b.content like  '%${query}%')
+        order by b.update_time desc
+    </select>
+
+    <resultMap id="detailedBlog" type="com.gong.vo.DetailedBlog">
+        <id property="id" column="bid"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="flag" column="flag"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="typeName" column="name"/>
+        <result property="views" column="views"/>
+        <result property="commentCount" column="comment_count"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="commentable" column="commentable"/>
+        <result property="shareStatement" column="share_statement"/>
+        <result property="appreciation" column="appreciation"/>
+        <result property="nickname" column="nickname"/>
+        <result property="avatar" column="avatar"/>
+        <result property="tagName" column="name"/>
+    </resultMap>
+
+    <!--博客详情查询-->
+    <select id="getDetailedBlog" resultMap="detailedBlog">
+        select b.id bid,b.first_picture,b.flag,b.title,b.content,b.views,b.comment_count,b.update_time,b.commentable,b.share_statement,b.appreciation, u.nickname,u.avatar,t.name
+        from blog.t_blog b,blog.t_user u, blog.t_type t
+        where b.user_id = u.id and b.type_id = t.id and b.id = #{id}
+    </select>
+
+    <!--分类页面博客查询-->
+    <select id="getByTypeId" resultMap="firstPage">
+        select b.id,b.title,b.first_picture, b.views, b.comment_count, b.update_time, b.description,
+               t.name ,
+               u.nickname, u.avatar
+        from blog.t_blog b, blog.t_type t,blog.t_user u
+        where b.type_id = t.id and u.id = b.user_id and b.type_id = #{typeId} order by b.update_time desc
+    </select>
+
+    <!--分组查询年份-->
+    <select id="getGroupYear" resultType="String">
+        select date_format(b.update_time,'%Y') as year from blog.t_blog b group by year order by year desc
+    </select>
+
+    <!--根据年份查询博客-->
+    <select id="getByYear" resultType="Blog">
+        select * from blog.t_blog b where date_format(b.update_time,'%Y')=#{year}
+    </select>
+
+    <!--查询博客数目-->
+    <select id="getBlogTotal" resultType="Integer">
+        select count(*) from blog.t_blog
+    </select>
+</mapper>
